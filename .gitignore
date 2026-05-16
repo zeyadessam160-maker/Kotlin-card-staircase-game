@@ -1,0 +1,5 @@
+/build/
+/.idea/
+/.gradle/
+/public/distribution.zip
+gradle.properties

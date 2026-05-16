@@ -1,0 +1,124 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Refreshable</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">service</a>
+</div>
+
+<h1>Coverage Summary for Class: Refreshable (service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+</tr>
+<tr>
+  <td class="name">Refreshable</td>
+    <td class="coverageStat"/>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package service
+&nbsp;
+&nbsp;/**
+&nbsp; * This interface provides a mechanism for the service layer classes to communicate
+&nbsp; * (usually to the GUI classes) that certain changes have been made to the entity
+&nbsp; * layer, so that the user interface can be updated accordingly.
+&nbsp; *
+&nbsp; * Default (empty) implementations are provided for all methods, so that implementing
+&nbsp; * GUI classes only need to react to events relevant to them.
+&nbsp; *
+&nbsp; * @see AbstractRefreshingService
+&nbsp; */
+&nbsp;interface Refreshable{
+&nbsp;
+&nbsp;    /**
+&nbsp;     * A single staircase stack changed (card added/removed/replaced).
+&nbsp;     *
+&nbsp;     * @param index Staircase stack index that changed (0..4).
+&nbsp;     */
+&nbsp;    fun refreshStaircase(index: Int) { }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * A player&#39;s hand changed (draw, discard, combine, destroy).
+&nbsp;     *
+&nbsp;     * @param index The position in the player&#39;s hand that changed.
+&nbsp;     */
+&nbsp;    fun refreshHand(index: Int) { }
+&nbsp;
+&nbsp;    /** The user-visible log changed (a new message was appended). */
+&nbsp;    fun refreshLog() { }
+&nbsp;
+&nbsp;    /** The discard pile changed (card added/reset). */
+&nbsp;    fun refreshDiscardStack() { }
+&nbsp;
+&nbsp;    /** The draw pile changed (card drawn or stack refilled). */
+&nbsp;    fun refreshDrawStack() { }
+&nbsp;
+&nbsp;    /** Initial UI setup right after a new game is created. */
+&nbsp;    fun refreshAfterStartGame() { }
+&nbsp;
+&nbsp;    /** End-of-turn updates (e.g., next player highlight). */
+&nbsp;    fun refreshAfterTurn() { }
+&nbsp;    /**
+&nbsp;     * Called once the game has ended.
+&nbsp;     *
+&nbsp;     * This refresh is used to trigger the transition to the end screen,
+&nbsp;     * where final scores, collected cards, and the winner are displayed.
+&nbsp;     */
+&nbsp;    fun refreshToEndGame() { }
+&nbsp;}
+&nbsp;
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-11-30 21:26</div>
+</div>
+</body>
+</html>

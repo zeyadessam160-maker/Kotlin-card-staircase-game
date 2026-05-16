@@ -1,0 +1,5 @@
+kotlin.code.style=official
+
+# Required only if you have access to the university GitLab package registry
+sopra-gitlab.package-registry.url=YOUR_PACKAGE_REGISTRY_URL
+sopra-gitlab.package-registry.token=YOUR_ACCESS_TOKEN
